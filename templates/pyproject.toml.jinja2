@@ -1,0 +1,53 @@
+[build-system]
+requires = [ "flit_core >=3.2,<4",]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "[[ package_name ]]"
+version = "[[ version ]]"
+description = "[[ description ]]"
+readme = "README.md"
+dependencies = [
+    "click",
+    "pydantic",
+    "python-dotenv",
+    "radon",
+    "requests",
+    "tabulate",
+    "toml",
+    "types-toml",
+]
+authors = [
+    { name = "[[ author ]]", email = "[[ email ]]" }
+]
+
+[tool.flit.module]
+module = "[[ package_name ]]"
+
+[project.optional-dependencies]
+dev = [
+    "bandit",
+    "build",
+    "pip-audit",
+    "py-cyclo",
+    "pytest",
+    "pytest-cov",
+    "pytest-mock",
+    "requests-mock",
+    "mypy",
+    "black",
+    "flake8",
+    "isort",
+    "jinja2",
+    "pylint",
+    "twine",
+]
+
+[project.scripts]
+main = "[[ package_name ]].main:main"
+
+[tool.black]
+line-length = 88
+target-version = [ "py313",]
+include = "\\.pyi?$"
+exclude = "/(\n    \\.git\n    | \\.hg\n    | \\.mypy_cache\n    | \\.tox\n    | \\.venv\n    | _build\n    | buck-out\n    | build\n    | dist\n)/\n"
