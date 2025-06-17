@@ -1,41 +1,52 @@
-# Python Template
+# gherkin
 
-This is a template repository for creating Python projects.
+A simple utility for formatting Gherkin.
 
-From a repository created from this template, you can create a new project by following these steps:
-
-## Step 1. Create a New Repository from this Template in GitHub
-
-## Step 2. Clone the New Repository
+## Installation
 
 ```bash
-git clone https://github.com/<your-github-user>/<your-repo-name>.git
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install invoke flit
+invoke install
 ```
 
-## Step 3. Initial Setup
+## Usage
+
+Todo: Add usage instructions here.
+
+## Features
+
+- Feature 1
+- Feature 2
+- Feature 3
+
+## Contributing
+
+Contributions are welcome! Please follow the contribution guidelines.
+
+## Testing
 
 ```bash
-cd <your-repo-name>
-./setup.sh
+source .venv/bin/activate
+invoke test
 ```
 
-## Step 4. Commit and Push
+## License
 
-Please be careful to not attempt to commit and push back to the template repository.
-These steps are intended to be run in a new repository created from this template.
+This project is licensed under the MIT license.
 
-```bash
-# Create a new feature branch for your changes
-git checkout -b feature/init
+## Acknowledgments
 
-# Add all files to the staging area
-git add .
+Todo: Add acknowledgments here.
 
-# Commit the changes with a message
-git commit -m "chore: initial setup"
+## Contact
 
-# Push the changes to the new repository
-git push --set-upstream origin feature/init
-```
+Maintainer: Omar Crosby
+Email: omar.crosby@gmail.com
 
-Yes, that's all you need to do.
+## References
+
+- [InquirePy](https://inquirerpy.readthedocs.io/en/latest/)
+- [Primer on Jinja Templating](https://realpython.com/primer-on-jinja-templating/#use-an-external-file-as-a-template)

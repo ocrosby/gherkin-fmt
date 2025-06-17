@@ -1,4 +1,4 @@
-name: Python Checks
+name: Run Tests
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  checks:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,17 +26,7 @@ jobs:
           pip install flit invoke
           invoke install
 
-      - name: Lint
-        run: invoke lint
-
-      - name: Format check with black
-        run: black --check src/ tests/
-
-      - name: Static type check with mypy
-        run: mypy src/
-
-      - name: Security scan with bandit
-        run: bandit -r src/
-
-      - name: Dependency vulnerability scan
-        run: pip-audit
+      - name: Run tests with coverage
+        run: |
+          coverage run -m pytest
+          coverage report
