@@ -16,7 +16,9 @@ def find_root_directory() -> Optional[str]:
 
     return None
 
+
 # Shared helper functions
+
 
 def dedent_lines(lines):
     return [line.lstrip() for line in lines]

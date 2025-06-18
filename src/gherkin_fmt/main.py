@@ -8,6 +8,7 @@ def cli():
     """gherkin-fmt: Format and lint Gherkin files."""
     pass
 
+
 @cli.command()
 @click.argument("file", type=click.Path(exists=True))
 def lint(file):
@@ -18,6 +19,7 @@ def lint(file):
             click.echo(f"{file}:{issue['line']}: {issue['message']}")
         raise SystemExit(1)
     click.echo("No issues found.")
+
 
 @cli.command()
 @click.argument("file", type=click.Path(exists=True))
@@ -30,6 +32,7 @@ def fmt(file, in_place):
             f.write(formatted)
     else:
         click.echo(formatted)
+
 
 if __name__ == "__main__":
     cli()

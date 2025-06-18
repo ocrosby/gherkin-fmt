@@ -16,6 +16,7 @@ dependencies = [
     "tabulate",
     "toml",
     "types-toml",
+    "gherkin-official",
 ]
 authors = [
     { name = "Omar Crosby", email = "omar.crosby@gmail.com" }
@@ -42,7 +43,6 @@ dev = [
     "pylint",
     "twine",
     "click",
-    "gherkin-official",
 ]
 
 [project.scripts]

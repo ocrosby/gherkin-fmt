@@ -1,4 +1,4 @@
-from gherkin.parser import Parser
+from gherkin_fmt.parser import Parser
 
 
 def validate_gherkin(source: str):
@@ -12,4 +12,3 @@ def validate_gherkin(source: str):
 
     # TODO: Add rule checks here
     return issues
-

@@ -10,7 +10,7 @@ import argparse
 import json
 import logging
 from pathlib import Path
-from typing import Any, Callable
+from typing import Callable
 
 import toml
 
@@ -150,7 +150,9 @@ if __name__ == "__main__":
         Path("pyproject.toml"): update_version_in_pyproject_toml,
         Path("VERSION"): update_version_in_version_txt,
         Path("docs/source/conf.py"): update_version_in_conf_py,
-        Path("package.json"): lambda v: update_version_in_json(Path("templates/package.json.jinja2"), v),
+        Path("package.json"): lambda v: update_version_in_json(
+            Path("templates/package.json.jinja2"), v
+        ),
         Path("package-lock.json"): lambda v: update_version_in_json(
             Path("package-lock.json"), v
         ),
