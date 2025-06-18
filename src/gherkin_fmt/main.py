@@ -6,7 +6,6 @@ from gherkin_fmt.controllers import format_gherkin, validate_gherkin
 @click.group()
 def cli():
     """gherkin-fmt: Format and lint Gherkin files."""
-    pass
 
 
 @cli.command()
@@ -28,7 +27,7 @@ def fmt(file, in_place):
     """Format Gherkin file."""
     formatted = format_gherkin(file)
     if in_place:
-        with open(file, "w") as f:
+        with open(file, "w", encoding="utf-8") as f:
             f.write(formatted)
     else:
         click.echo(formatted)

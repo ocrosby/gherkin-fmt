@@ -11,4 +11,4 @@ def parse_gherkin(source: str) -> dict:
     try:
         return parser.parse(TokenScanner(source))
     except Exception as e:
-        raise ValueError(f"Invalid Gherkin syntax: {e}")
+        raise ValueError(f"Invalid Gherkin syntax: {e}") from e
