@@ -2,7 +2,7 @@ import logging
 import os
 
 # Create a logger
-logger = logging.getLogger("gherkin.logger")
+logger = logging.getLogger("gherkin_fmt.logger")
 logger.setLevel(logging.DEBUG)
 
 # Create log directory if it doesn't exist
