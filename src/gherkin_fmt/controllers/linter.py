@@ -1,5 +1,6 @@
 from gherkin.parser import Parser
 
+
 def validate_gherkin(source: str):
     issues = []
     parser = Parser()

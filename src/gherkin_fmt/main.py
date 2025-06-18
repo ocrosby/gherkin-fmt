@@ -1,5 +1,7 @@
 import click
-from gherkin_fmt.controllers import validate_gherkin, format_gherkin
+
+from gherkin_fmt.controllers import format_gherkin, validate_gherkin
+
 
 @click.group()
 def cli():

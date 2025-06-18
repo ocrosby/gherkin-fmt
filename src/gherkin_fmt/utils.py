@@ -1,6 +1,6 @@
 import os
-
 from typing import Optional
+
 
 def find_root_directory() -> Optional[str]:
     """
